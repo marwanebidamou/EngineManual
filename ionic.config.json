@@ -1,0 +1,7 @@
+{
+  "name": "engineManual",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
