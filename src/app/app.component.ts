@@ -10,40 +10,33 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
   styleUrls: ['app.component.scss']
 })
 export class AppComponent implements OnInit {
-  public selectedIndex = 0;
-  public appPages = [
+  public selectedIndex = -1;
+  public selectedList = -1;
+
+  public camions = [
     {
-      title: 'Inbox',
-      url: '/folder/Inbox',
-      icon: 'mail'
+      title: 'BELAZ 75180',
+      url: '/folder/belaz'
     },
     {
-      title: 'Outbox',
-      url: '/folder/Outbox',
-      icon: 'paper-plane'
-    },
-    {
-      title: 'Favorites',
-      url: '/folder/Favorites',
-      icon: 'heart'
-    },
-    {
-      title: 'Archived',
-      url: '/folder/Archived',
-      icon: 'archive'
-    },
-    {
-      title: 'Trash',
-      url: '/folder/Trash',
-      icon: 'trash'
-    },
-    {
-      title: 'Spam',
-      url: '/folder/Spam',
-      icon: 'warning'
+      title: 'KOMATSU 730 E ',
+      url: '/folder/komatsu'
     }
   ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
+
+  public machines = [
+    {
+      title: 'Chargeuse 994 H',
+      url: '/folder/chargeuse'
+    }
+  ];
+
+  public bulldozer  = [
+    {
+      title: 'D11',
+      url: '/folder/bulldozer'
+    }
+  ];
 
   constructor(
     private platform: Platform,
@@ -62,8 +55,8 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     const path = window.location.pathname.split('folder/')[1];
-    if (path !== undefined) {
-      this.selectedIndex = this.appPages.findIndex(page => page.title.toLowerCase() === path.toLowerCase());
-    }
+    /* if (path !== undefined) {
+      this.selectedIndex = this.camions.findIndex(page => page.title.toLowerCase() === path.toLowerCase());
+    } */
   }
 }
